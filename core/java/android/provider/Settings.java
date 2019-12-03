@@ -7914,22 +7914,19 @@ public final class Settings {
         private static final Validator ACCESSIBILITY_SPEAK_PASSWORD_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
-         * Whether to draw text with high contrast while in accessibility mode.
+         * Indicates whether a DPC has been downloaded during provisioning.
+         *
+         * <p>Type: int (0 for false, 1 for true)
+         *
+         * <p>If this is true, then any attempts to begin setup again should result in factory reset
          *
          * @hide
          */
-        public static final String ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED =
-                "high_text_contrast_enabled";
-
-        private static final Validator ACCESSIBILITY_HIGH_TEXT_CONTRAST_ENABLED_VALIDATOR =
-                BOOLEAN_VALIDATOR;
+        public static final String MANAGED_PROVISIONING_DPC_DOWNLOADED =
+                "managed_provisioning_dpc_downloaded";
 
         /**
-         * Setting that specifies whether the display magnification is enabled via a system-wide
-         * triple tap gesture. Display magnifications allows the user to zoom in the display content
-         * and is targeted to low vision users. The current magnification scale is controlled by
-         * {@link #ACCESSIBILITY_DISPLAY_MAGNIFICATION_SCALE}.
-         *
+         * Whether the current user has been set up via setup wizard (0 = false, 1 = true)
          * @hide
          */
         @TestApi
